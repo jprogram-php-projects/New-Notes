@@ -1,4 +1,4 @@
-# ![Logo](backend/public/assets/images/logo.png)
+# ![Logo](public/assets/images/logo.png)
 
 Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler, atualizar e excluir notas (CRUD). O sistema utiliza **PostgreSQL** como banco de dados para armazenar as informações das notas e segue o padrão **RESTful API** para comunicação entre backend e frontend.
 
