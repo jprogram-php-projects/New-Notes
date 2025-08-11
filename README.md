@@ -50,20 +50,22 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
    DB_PASSWORD=sua_senha
    ```
 
-   Gere a chave da aplicação e defina a chave JWT:
+4. **Gere as chaves da aplicação e JWT:**
 
    ```bash
    php artisan key:generate
    php artisan jwt:secret
    ```
 
-4. **Execute as migrações e seeders:**
+   ⚠️ **Importante:** Após gerar as chaves, abra o arquivo `.env` e verifique se as variáveis `APP_KEY` e `JWT_SECRET` foram preenchidas corretamente.
+
+5. **Execute as migrações e seeders:**
 
    ```bash
    php artisan migrate --seed
    ```
 
-5. **Inicie o servidor de desenvolvimento:**
+6. **Inicie o servidor de desenvolvimento:**
 
    ```bash
    php artisan serve
