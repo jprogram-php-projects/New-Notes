@@ -51,7 +51,3 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
    Acesse [http://localhost:4200](http://localhost:4200)
 
 ---
-
-## Observações
-
-* O `composer.json`, `composer.lock`, `package.json` e `package-lock.json` devem ser versionados no GitHub.
