@@ -110,6 +110,5 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
 ## Observações
 
 * Certifique-se de que o PostgreSQL esteja rodando antes de iniciar o backend.
-* O `composer.json`, `composer.lock`, `package.json` e `package-lock.json` devem ser versionados no GitHub.
 * Para gerar dados iniciais, utilize os **seeders** com `php artisan migrate --seed`.
 * Sempre que clonar o projeto, lembre-se de rodar `php artisan key:generate` e `php artisan jwt:secret` para configurar corretamente as chaves.
