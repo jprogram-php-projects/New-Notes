@@ -7,6 +7,7 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
 * [Laravel 11.x](https://laravel.com/) - Framework PHP
 * [PostgreSQL](https://www.postgresql.org/) - Banco de Dados Relacional
 * [JWT Auth](https://jwt.io/) - Autenticação via JSON Web Token
+* [Angular 20.1.5](https://angular.dev/) - Framework Frontend
 
 ## Funcionalidades
 
