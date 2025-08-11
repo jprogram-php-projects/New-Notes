@@ -1,4 +1,4 @@
-# ![Logo](public/assets/images/logo.png)
+# ![Logo](backend/public/assets/images/logo.png)
 
 Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler, atualizar e excluir notas (CRUD). O sistema utiliza **PostgreSQL** como banco de dados para armazenar as informações das notas e segue o padrão **RESTful API** para comunicação entre backend e frontend.
 
@@ -7,6 +7,7 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
 * [Laravel 11.x](https://laravel.com/) - Framework PHP
 * [PostgreSQL](https://www.postgresql.org/) - Banco de Dados Relacional
 * [JWT Auth](https://jwt.io/) - Autenticação via JSON Web Token
+* [Angular 20.1.5](https://angular.dev/) - Framework Frontend
 
 ## Funcionalidades
 
@@ -22,8 +23,8 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
 1. **Clone este repositório:**
 
    ```bash
-   git clone https://github.com/seuusuario/seu-repositorio-backend.git
-   cd seu-repositorio-backend
+   git clone https://github.com/jprogram-php-projects/New-Notes.git
+   cd backend
    ```
 
 2. **Instale as dependências do Laravel:**
@@ -49,63 +50,26 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
    DB_PASSWORD=sua_senha
    ```
 
-4. **Gere as chaves da aplicação e JWT:**
+   Gere a chave da aplicação e defina a chave JWT:
 
    ```bash
    php artisan key:generate
    php artisan jwt:secret
    ```
 
-   ⚠️ **Importante:** Após gerar as chaves, abra o arquivo `.env` e verifique se as variáveis `APP_KEY` e `JWT_SECRET` foram preenchidas corretamente.
-
-5. **Execute as migrações e seeders:**
+4. **Execute as migrações e seeders:**
 
    ```bash
    php artisan migrate --seed
    ```
 
-6. **Inicie o servidor de desenvolvimento:**
+5. **Inicie o servidor de desenvolvimento:**
 
    ```bash
    php artisan serve
    ```
 
    Acesse o sistema no navegador: [http://localhost:8000](http://localhost:8000)
-
----
-
-## Instalação Frontend
-
-1. **Clone o repositório do frontend:**
-
-   ```bash
-   git clone https://github.com/seuusuario/seu-repositorio-frontend.git
-   cd seu-repositorio-frontend
-   ```
-
-2. **Instale as dependências:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Configure a URL da API no ambiente:**
-   Edite o arquivo `src/environments/environment.ts`:
-
-   ```ts
-   export const environment = {
-     production: false,
-     apiUrl: 'http://localhost:8000/api'
-   };
-   ```
-
-4. **Inicie o servidor Angular:**
-
-   ```bash
-   ng serve
-   ```
-
-   Acesse [http://localhost:4200](http://localhost:4200)
 
 ---
 
