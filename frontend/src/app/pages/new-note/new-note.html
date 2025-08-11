@@ -1,0 +1,48 @@
+
+  <!-- Top bar -->
+  <app-top-bar></app-top-bar>
+
+<div class="new-note-wrapper">
+  <div class="new-note-container">
+    <!-- Header -->
+    <div class="header">
+      <h2>📝 New Note</h2>
+      <button class="cancel-btn" (click)="onCancel()">✖</button>
+    </div>
+
+    <!-- Form -->
+    <form (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <label>Note Title</label>
+        <input
+          type="text"
+          [(ngModel)]="text_title"
+          name="text_title"
+          placeholder="Enter a title..."
+        />
+        <div *ngIf="errors['text_title']" class="error">
+          {{ errors['text_title'] }}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Note Text</label>
+        <textarea
+          rows="6"
+          [(ngModel)]="text_note"
+          name="text_note"
+          placeholder="Write your note here..."
+        ></textarea>
+        <div *ngIf="errors['text_note']" class="error">
+          {{ errors['text_note'] }}
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button type="button" class="btn-cancel" (click)="onCancel()">Cancelar</button>
+        <button type="submit" class="btn-save">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>

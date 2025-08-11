@@ -1,0 +1,39 @@
+<app-top-bar></app-top-bar>
+
+<div class="edit-note-wrapper">
+  <div class="edit-note-container">
+    <div class="header-row">
+      <h2>EDIT NOTE</h2>
+      <button mat-icon-button color="warn" (click)="onCancel()" aria-label="Close edit">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Note Title</mat-label>
+        <input matInput formControlName="text_title" />
+        <mat-error *ngIf="editForm.get('text_title')?.hasError('required')">
+          Title is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Note Text</mat-label>
+        <textarea matInput rows="6" formControlName="text_note"></textarea>
+        <mat-error *ngIf="editForm.get('text_note')?.hasError('required')">
+          Text is required
+        </mat-error>
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-stroked-button color="primary" type="button" (click)="onCancel()">
+          <mat-icon>cancel</mat-icon> Cancel
+        </button>
+        <button mat-raised-button color="accent" type="submit" [disabled]="editForm.invalid">
+          <mat-icon>check_circle</mat-icon> Update
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

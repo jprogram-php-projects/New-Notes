@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --topbar-height: 72px; /* valor padrão, será sobrescrito em runtime */
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: linear-gradient(135deg, #bcdcff, #f0f6ff);
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+
+.login-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

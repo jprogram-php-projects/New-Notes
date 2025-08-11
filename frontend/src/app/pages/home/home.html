@@ -1,0 +1,36 @@
+<!-- home.html -->
+<div class="home-container">
+  <div class="row center">
+    <div class="col">
+
+      <!-- top bar -->
+      <app-top-bar></app-top-bar>
+
+      <!-- Tela de carregamento -->
+      <div *ngIf="loading" class="text-center mt-5">
+        <p>Loading notes...</p>
+      </div>
+
+      <!-- Nenhuma nota -->
+      <div *ngIf="!loading && notes.length === 0" class="row center mt-5">
+        <div class="col text-center">
+          <p class="display">You have no notes available!</p>
+          <button class="btn-lg" (click)="goToNew()">
+            <span class="icon">📝</span> Create Your First Note
+          </button>
+        </div>
+      </div>
+
+      <!-- Lista de notas -->
+      <div *ngIf="!loading && notes.length > 0">
+        <div class="row end mb-3">
+          <button class="btn" (click)="goToNew()">
+            <span class="icon">📝</span> New Note
+          </button>
+        </div>
+
+        <app-note *ngFor="let note of notes" [note]="note"></app-note>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+.delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px); /* subtraindo a altura aproximada do top-bar */
+  padding: 0; /* opcional, para centralizar sem deslocar */
+}
+
+.delete-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.delete-icon {
+  font-size: 3rem;
+  color: #ffc107;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.note-title {
+  color: #1976d2;
+  margin-bottom: 0.5rem;
+}
+
+.delete-text {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn.cancel {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.btn.cancel:hover {
+  background-color: #bbdefb;
+}
+
+.btn.confirm {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.btn.confirm:hover {
+  background-color: #ffcdd2;
+}

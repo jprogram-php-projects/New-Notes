@@ -1,0 +1,101 @@
+/* top-bar.css */
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+
+.top-bar-container {
+  position: fixed; /* Fixa o top-bar na parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #007bff;
+  z-index: 1000;
+}
+
+.top-bar-col {
+  flex: 1;
+  padding: 0 1rem;
+  min-width: 200px;
+}
+
+.logo-img {
+  max-height: 40px;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.user-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.btn-outline {
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background: transparent;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Media Queries para Telas Menores */
+@media (max-width: 600px) {
+  .top-bar-container {
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+  }
+
+  .top-bar-col {
+    flex: 1;
+    text-align: center; /* Centraliza o conteúdo de cada coluna */
+  }
+
+  .logo {
+    margin-bottom: 0.5rem; /* Espaço entre logo e texto */
+  }
+
+  .center-text {
+    margin-bottom: 0.5rem; /* Espaço entre texto e usuário */
+  }
+
+  .user-info {
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+}

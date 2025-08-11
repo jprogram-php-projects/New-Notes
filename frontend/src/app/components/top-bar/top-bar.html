@@ -1,0 +1,22 @@
+<!-- top-bar.html -->
+<div class="top-bar-container">
+  <div class="top-bar-col logo">
+    <a routerLink="/">
+      <img src="/assets/images/logo.png" alt="Notes logo" class="logo-img" />
+    </a>
+  </div>
+
+  <div class="top-bar-col center-text">
+    A simple <span class="highlight">Angular</span> project!
+  </div>
+
+  <div class="top-bar-col user-info">
+    <span class="username">
+      <i class="fa-solid fa-user-circle"></i>
+      {{ username || 'Guest' }}
+    </span>
+    <button class="btn-outline" (click)="logout()">
+      Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </button>
+  </div>
+</div>

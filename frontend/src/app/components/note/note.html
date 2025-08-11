@@ -1,0 +1,33 @@
+<div class="note-row">
+  <div class="note-card">
+    <div class="note-header">
+      <div class="note-info">
+        <h4 class="text-info">{{ note.title }}</h4>
+        <small class="text-muted">
+          <span class="label">Created at:</span>
+          <strong>{{ getFormattedDate(note.created_at) }}</strong>
+        </small>
+
+        <ng-container *ngIf="note.updated_at !== note.created_at">
+          <small class="text-muted ms-3">
+            <span class="label">Updated at:</span>
+            <strong>{{ getFormattedDate(note.updated_at) }}</strong>
+          </small>
+        </ng-container>
+      </div>
+
+      <div class="note-actions">
+        <button mat-icon-button color="primary" [routerLink]="['/edit', note.id]" aria-label="Editar nota">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" [routerLink]="['/delete', note.id]" aria-label="Excluir nota">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <hr />
+
+    <p class="note-text text-secondary">{{ note.text }}</p>
+  </div>
+</div>

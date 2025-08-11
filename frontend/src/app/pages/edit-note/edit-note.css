@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.edit-note-wrapper {
+  /* desloca todo o wrapper para baixo usando a altura real do topbar */
+  margin-top: var(--topbar-height, 72px);
+  min-height: calc(100vh - var(--topbar-height, 72px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* padding horizontal / respiração */
+  padding: 1.25rem 1rem;
+  box-sizing: border-box;
+}
+
+/* cartão branco destacado (igual ao new-note) */
+.edit-note-container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 40, 80, 0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+
+/* header */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.header-row h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #1a2330;
+  letter-spacing: 0.4px;
+}
+
+/* formulário */
+.full-width {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Pequenos ajustes visuais para mat-form-field dentro do cartão */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-radius: 8px;
+}
+.mat-form-field .mat-input-element {
+  padding: 14px 12px;
+  font-size: 1rem;
+  min-height: 48px;
+}
+
+/* Actions (botões) */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 8px;
+}
+.actions .mat-stroked-button,
+.actions .mat-raised-button {
+  border-radius: 28px;
+  padding: 8px 18px;
+}
+
+/* Responsividade: em telas pequenas colocamos o card mais lá em cima (mas abaixo do topbar) */
+@media (max-width: 600px) {
+  .edit-note-wrapper {
+    /* pequena folga extra para separar do topbar quando ele empilha */
+    margin-top: calc(var(--topbar-height, 72px) + 8px);
+    min-height: auto;           /* deixa rolar naturalmente */
+    align-items: flex-start;    /* evitar que o cartão seja centrado verticalmente */
+    padding-top: 12px;
+  }
+
+  .edit-note-container {
+    margin-top: 0;
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .actions { justify-content: center; flex-wrap: wrap; }
+}

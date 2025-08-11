@@ -1,0 +1,45 @@
+<div class="login-page">
+  <div class="login-container">
+    <div class="login-box">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/assets/images/logo.png" alt="Notes logo">
+    </div>
+
+    <!-- Formulário -->
+    <form (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="username"
+          name="username"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+      </div>
+
+      <div *ngIf="errorMessage" class="text-danger">
+        {{ errorMessage }}
+      </div>
+
+      <button type="submit" class="btn full">LOGIN</button>
+    </form>
+
+    <!-- Rodapé -->
+    <div class="text-center mt-3 text-secondary">
+      <small>&copy; {{ currentYear }} Notes</small>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.login-page {
+  min-height: calc(100vh - var(--topbar-height, 0px)); /* se tiver top-bar, subtrai; senão usa 100vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* respiro nas bordas */
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px; /* largura do card que você queria */
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.login-box {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  box-sizing: border-box;
+  /* Garante que o conteúdo não ultrapasse em telas pequenas */
+  overflow: hidden;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.logo img {
+  max-width: 180px;
+  height: auto;
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+  background-color: #fff;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.btn.full {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.btn.full:hover {
+  background-color: #0b5ed7;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+
+  .login-container {
+    padding: 0 12px;
+  }
+
+  .btn.full {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+}
+
+/* Em telas muito pequenas (como celulares verticais) */
+@media (max-height: 500px) {
+  body {
+    padding: 0.5rem;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .login-container {
+    padding: 1rem 12px;
+    margin-top: 2rem;
+  }
+}
