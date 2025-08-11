@@ -49,20 +49,22 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
    DB_PASSWORD=sua_senha
    ```
 
-   Gere a chave da aplicação e defina a chave JWT:
+4. **Gere as chaves da aplicação e JWT:**
 
    ```bash
    php artisan key:generate
    php artisan jwt:secret
    ```
 
-4. **Execute as migrações e seeders:**
+   ⚠️ **Importante:** Após gerar as chaves, abra o arquivo `.env` e verifique se as variáveis `APP_KEY` e `JWT_SECRET` foram preenchidas corretamente.
+
+5. **Execute as migrações e seeders:**
 
    ```bash
    php artisan migrate --seed
    ```
 
-5. **Inicie o servidor de desenvolvimento:**
+6. **Inicie o servidor de desenvolvimento:**
 
    ```bash
    php artisan serve
@@ -110,6 +112,5 @@ Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler
 ## Observações
 
 * Certifique-se de que o PostgreSQL esteja rodando antes de iniciar o backend.
-* O `composer.json`, `composer.lock`, `package.json` e `package-lock.json` devem ser versionados no GitHub.
 * Para gerar dados iniciais, utilize os **seeders** com `php artisan migrate --seed`.
 * Sempre que clonar o projeto, lembre-se de rodar `php artisan key:generate` e `php artisan jwt:secret` para configurar corretamente as chaves.
