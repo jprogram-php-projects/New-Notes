@@ -1,59 +1,57 @@
-# Frontend
+# ![Logo](../backend/public/assets/images/logo.png)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+Este é um projeto Laravel chamado **Notes**, onde os usuários podem criar, ler, atualizar e excluir notas (CRUD). O sistema utiliza **PostgreSQL** como banco de dados para armazenar as informações das notas e segue o padrão **RESTful API** para comunicação entre backend e frontend.
 
-## Development server
+## Tecnologias Utilizadas
 
-To start a local development server, run:
+* [Laravel 11.x](https://laravel.com/) - Framework PHP
+* [PostgreSQL](https://www.postgresql.org/) - Banco de Dados Relacional
+* [JWT Auth](https://jwt.io/) - Autenticação via JSON Web Token
+* [Angular 20.1.5](https://angular.dev/) - Framework Frontend
 
-```bash
-ng serve
-```
+## Funcionalidades
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* **Criar Notas**: Permite que o usuário crie novas notas.
+* **Ler Notas**: Exibe uma lista de todas as notas e detalhes específicos de cada nota.
+* **Atualizar Notas**: O usuário pode editar o conteúdo de uma nota existente.
+* **Excluir Notas**: O usuário pode deletar uma nota.
+* **Autenticação JWT**: Login e proteção de rotas via token.
+* **API RESTful**: Estrutura de rotas seguindo boas práticas REST.
 
-## Code scaffolding
+## Instalação Frontend
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Acesse o repositório do frontend:**
 
-```bash
-ng generate component component-name
-```
+   ```bash
+   cd frontend
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. **Instale as dependências:**
 
-```bash
-ng generate --help
-```
+   ```bash
+   npm install
+   ```
 
-## Building
+3. **Configure a URL da API no ambiente:**
+   Edite o arquivo `src/environments/environment.ts`:
 
-To build the project run:
+   ```ts
+   export const environment = {
+     production: false,
+     apiUrl: 'http://localhost:8000/api'
+   };
+   ```
 
-```bash
-ng build
-```
+4. **Inicie o servidor Angular:**
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+   ```bash
+   ng serve
+   ```
 
-## Running unit tests
+   Acesse [http://localhost:4200](http://localhost:4200)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## Observações
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* O `composer.json`, `composer.lock`, `package.json` e `package-lock.json` devem ser versionados no GitHub.
